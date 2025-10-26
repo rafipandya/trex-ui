@@ -24,13 +24,13 @@ jobs:
         command: npm run test
   build: 
     executor: node/default
-      description: Run build  
-      steps:
-        - checkout
-        - node/install-packages   
-        - run:
-          name: Build
-          command: npm run build
+    description: Run build  
+    steps:
+      - checkout
+      - node/install-packages   
+      - run:
+        name: Build
+        command: npm run build
 
 workflows: 
   build_app: 
