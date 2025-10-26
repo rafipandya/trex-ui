@@ -60,11 +60,12 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
+      - run: 
+          name: Login to npm
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
       - run:
           name: Publish to npm
-          command: npm publish
-        environment:
-          NPM_TOKEN: $NPM_TOKEN
+          command: npm publish --access public
 
 workflows:
   build_app:
