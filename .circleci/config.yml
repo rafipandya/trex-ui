@@ -15,13 +15,13 @@ jobs:
         command: npm run lint:fix
   run_test: 
     executor: node/default
-      description: Run test
-      steps:
-        - checkout
-        - node/install-packages 
-        - run:
-          name: Run test
-          command: npm run test
+    description: Run test
+    steps:
+      - checkout
+      - node/install-packages 
+      - run:
+        name: Run test
+        command: npm run test
   build: 
     executor: node/default
       description: Run build  
