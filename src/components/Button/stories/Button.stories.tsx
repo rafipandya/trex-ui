@@ -97,3 +97,11 @@ export const WithClick: Story = {
         onClick: () => alert("Button clicked!"),
     },
 };
+
+export const WithClicks: Story = {
+    args: {
+        label: "Click Me",
+        mode: "fill",
+        onClick: () => alert("Button clicked!"),
+    },
+};
