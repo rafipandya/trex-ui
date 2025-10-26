@@ -15,7 +15,7 @@ jobs:
         command: npm run lint:fix
   run_test: 
     executor: node/default
-      description: Run test  
+      description: Run test
       steps:
         - checkout
         - node/install-packages 
