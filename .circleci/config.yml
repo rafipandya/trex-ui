@@ -76,7 +76,7 @@ workflows:
       - build:
           requires:
             - run_test
-      - run_relese:
+      - run_release:
           requires:
             - build
       - npm_publish:
